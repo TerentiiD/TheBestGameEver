@@ -35,21 +35,22 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
-        if (!_isPlayerNoticed)
-        {
-            if (_isPlayerNoticed)
-            {
-                _navMeshAgent.destination = player.transform.position;
-            }
-        }
+
+       if (_isPlayerNoticed)
+       {
+            _navMeshAgent.destination = player.transform.position;
+       }
         PatrolUpdate();
     }
 
     private void PatrolUpdate()
     {
-        if (_navMeshAgent.remainingDistance == 0)
+        if (!_isPlayerNoticed)
         {
-            PickNewPatrolPoint();
+            if (_navMeshAgent.remainingDistance == 0)
+            {
+                PickNewPatrolPoint();
+            }
         }
     }
     private void PickNewPatrolPoint()
