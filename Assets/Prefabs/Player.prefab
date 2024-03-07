@@ -27,7 +27,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.872, y: 1.293, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4174993015812069653}
   m_Father: {fileID: 3656000725967937138}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55,7 +56,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 755848214171951027}
-  - component: {fileID: 4812321787240540559}
   m_Layer: 5
   m_Name: Game Over Screen
   m_TagString: Untagged
@@ -85,18 +85,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4812321787240540559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171009984079780675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207db3909f2518c46a36143b30221a37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2219796447695813330
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +232,7 @@ GameObject:
   - component: {fileID: 650164022}
   - component: {fileID: 7575517923479761913}
   - component: {fileID: 625714246}
+  - component: {fileID: 2789825640145852765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -348,8 +337,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 100
   valueRectTransform: {fileID: 7337568177061370101}
-  gameplayUI: {fileID: 0}
-  gameOverScreen: {fileID: 0}
+  gameplayUI: {fileID: 5573915166907164884}
+  gameOverScreen: {fileID: 1171009984079780675}
+--- !u!114 &2789825640145852765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656000725967937141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08921ddde95ebf446aaeb0b661cfb29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 0}
+  grenadeSourceTransform: {fileID: 4174993015812069653}
+  force: 500
 --- !u!1 &3656000726516669471
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +961,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &6952047405538200407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4174993015812069653}
+  m_Layer: 0
+  m_Name: Grenade Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4174993015812069653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952047405538200407}
+  m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2031813264}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
 --- !u!1 &7568914854806194981
 GameObject:
   m_ObjectHideFlags: 0
